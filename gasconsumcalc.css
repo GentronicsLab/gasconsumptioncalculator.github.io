@@ -1,30 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-image: url("jake-blucker-OJX7gIU3E6U-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 20px 15px;
 }
 
-
 h1 {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 form {
     margin: 0 auto;
-    width: 300px;
+    max-width: 320px;
+    width: 100%;
 }
 
 label {
     font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
+/* Setting font-size to 16px prevents mobile browsers (iOS Safari) from auto-zooming on tap */
 input[type="number"] {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 15px;
     margin: 8px 0;
     box-sizing: border-box;
+    font-size: 16px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
@@ -34,7 +53,9 @@ button {
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
@@ -45,19 +66,17 @@ button:hover {
     color: #4CAF50;
 }
 
+/* Relative positioning keeps flags in the top corner cleanly across mobile screen widths */
 #flag-icon {
     position: absolute;
-    top: 10px;
-    right: 500px;
-
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
 }
 
 #flag-icon img {
-    max-width: 30px;
-    max-height: 30px;
-}
-
-#flag-icon img src {
-    max-width: 30px;
-    max-height: 30px;
+    width: 30px;
+    height: auto;
+    display: block;
 }
