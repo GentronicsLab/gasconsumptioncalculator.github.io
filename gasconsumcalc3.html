@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gasförbrukningskalkylator</title>
+    <link rel="stylesheet" type="text/css" href="gasconsumcalc.css">
+</head>
+
+<body>
+    <h1>Gasförbrukningskalkylator</h1>
+    <form>
+        <label for="avg-consumption">Genomsnittlig förbrukning (l/100 km):</label>
+        <input type="number" id="avg-consumption" name="avg-consumption" step="0.1">
+        <br>
+        <label for="distance">Avstånd (km):</label>
+        <input type="number" id="distance" name="distance">
+        <br>
+        <label for="gas-price">Bensinpris (per liter)€:</label>
+        <input type="number" id="gas-price" name="gas-price" step="0.01">
+        <br><br>
+        <button type="button" onclick="calculateCost()">Beräkna kostnad</button>
+    </form>
+    <br>
+    <h2>Total kostnad: <span id="total-cost"></span></h2>
+    <div id="flag-icon">
+        <a href="gasconsumcalc2.html">
+            <img src="Flag_of_Albania.png" alt="Albanian Flag Icon">
+        <a href="gasconsumcalc.html">
+            <img src="Flag_of_the_United_States.png" alt="United States Icon"
+        </a>    
+
+        </a>
+    </div>
+
+
+
+    <script src="gasconsumcalc3.js"></script>
+</body>
+
+</html>
