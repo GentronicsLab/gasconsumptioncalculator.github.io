@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Llogarit Koston e Udhetimit per Derivate</title>
-    <link rel="stylesheet" type="text/css" href="gasconsumcalc2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Consumption Calculator</title>
+    <link rel="stylesheet" type="text/css" href="gasconsumcalc.css">
 </head>
 
 <body>
-    <h1>Llogarit Koston e Udhetimit per Derivate</h1>
+    <h1>Gas Consumption Calculator</h1>
     <form>
-        <label for="avg-consumption">Mesatarja e Hargjimit (L/100km):</label>
-        <input type="number" id="avg-consumption" name="avg-consumption" step="0.1">
+        <label for="avg-consumption">Average Consumption (L/100km):</label>
+        <input type="number" id="avg-consumption" name="avg-consumption" step="0.1" inputmode="decimal">
         <br>
-        <label for="distance">Distanca (km):</label>
-        <input type="number" id="distance" name="distance">
+        <label for="distance">Distance (km):</label>
+        <input type="number" id="distance" name="distance" inputmode="decimal">
         <br>
-        <label for="gas-price">Qmimi i Derivatit (per liter)€:</label>
-        <input type="number" id="gas-price" name="gas-price" step="0.01">
+        <label for="gas-price">Gas Price (per liter) €:</label>
+        <input type="number" id="gas-price" name="gas-price" step="0.01" inputmode="decimal">
         <br><br>
-        <button type="button" onclick="calculateCost()">Kalkuloje Koston</button>
+        <button type="button" onclick="calculateCost()">Calculate Cost</button>
     </form>
     <br>
     <h2>Kosto Totale: <span id="total-cost"></span></h2>
