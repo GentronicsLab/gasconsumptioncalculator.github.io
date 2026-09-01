@@ -35,6 +35,8 @@ label {
     font-weight: bold;
     display: block;
     margin-top: 12px;
+    color: #ff0000; /* Change this hex code to your preferred color */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); /* Keeps text readable over the background image */
 }
 
 /* 16px font-size stops iOS from zooming in when tapping inputs */
