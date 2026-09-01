@@ -2,10 +2,8 @@
     box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+html {
+    height: -webkit-fill-available;
 }
 
 body {
@@ -16,11 +14,15 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    padding: 20px 15px;
+    margin: 0;
+    padding: 60px 15px 20px 15px; /* Added top padding so content doesn't overlap flags on small screens */
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 h1 {
-    margin-top: 40px;
+    margin-top: 20px;
+    font-size: 1.8rem;
 }
 
 form {
@@ -32,10 +34,10 @@ form {
 label {
     font-weight: bold;
     display: block;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
-/* Setting font-size to 16px prevents mobile browsers (iOS Safari) from auto-zooming on tap */
+/* 16px font-size stops iOS from zooming in when tapping inputs */
 input[type="number"] {
     width: 100%;
     padding: 12px 15px;
@@ -51,7 +53,7 @@ button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 12px 0 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -66,17 +68,20 @@ button:hover {
     color: #4CAF50;
 }
 
-/* Relative positioning keeps flags in the top corner cleanly across mobile screen widths */
+/* Fixed flag alignment for both desktop & mobile viewport boundaries */
 #flag-icon {
     position: absolute;
     top: 15px;
     right: 15px;
     display: flex;
     gap: 10px;
+    z-index: 999;
 }
 
 #flag-icon img {
-    width: 30px;
+    width: 32px;
     height: auto;
     display: block;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
