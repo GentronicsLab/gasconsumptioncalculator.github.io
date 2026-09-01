@@ -27,14 +27,23 @@ h1 {
 
 form {
     margin: 0 auto;
-    max-width: 320px;
+    max-width: 340px;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% transparent black container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 label {
     font-weight: bold;
     display: block;
     margin-top: 12px;
+    color: #000000; /* Black text */
+    background-color: #FFFFFF; /* White background box for the text */
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-align: left;
 }
 
 /* 16px font-size stops iOS from zooming in when tapping inputs */
